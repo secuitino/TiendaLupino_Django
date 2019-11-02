@@ -1,0 +1,341 @@
+{% extends 'core/base.html'%}<!-- Enlace desde donde llamaremos la herencia. Le decimos quien es el padre-->
+<!--Extendssssssss-->
+{% load static %}
+
+	{% block css %}
+	
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
+
+	<link rel="stylesheet" href="{% static 'core/css/estilo.css' %}">
+    {% endblock %}
+
+	{% block javascript %}
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+	<script src="{% static 'core/js/slider.js'%}"></script>
+ 	{%endblock%}
+
+	<!-- SLIDER REALIZADO CON PLUGIN BOXSLIDER -->
+
+
+{%block contenido %}
+	<div class="contenedor_slider">
+
+            <div class="slider">
+                <!--por cada imagen un div-->
+                <div>
+                    <img src="{% static 'core/img/instruments.jpg'%}" class="imagen-slider" title="Oferta valida desde 01 de septiembre hasta 30 de octubre, solo productos seleccionados.">
+                </div>
+                <!--por cada imagen un div-->
+
+
+                <!--por cada imagen un div-->
+                <div>
+                    <img src="{% static 'core/img/cuerda2.jpeg'%}" class="imagen-slider" title="Guitarras acusticas con un 40% de descuento, oferta valida desde 18 de Sept hasta 1 de Octubre">
+                </div>
+                <!--por cada imagen un div-->
+
+                 <div>
+                    <img src="{% static 'core/img/cuerda3.jpeg'%}" class="imagen-slider" title="Oferta valida desde 18 de septiembre hasta 30 de octubre, solo productos seleccionados.">
+                </div>
+
+                <div>
+                    <img src="{% static 'core/img/teclas1.jpeg'%}" class="imagen-slider" title="Pianos personales con 60% de descuento, solo hasta 30 de Septiembre.">
+                </div>
+
+            </div>
+	</div>
+
+
+	<!-- FIN SLIDER REALIZADO CON PLUGIN BOXSLIDER -->
+
+
+	<!-- TEXTO CABECERA-->
+
+	<div class="texto-cabecera">
+
+		<h1>Tienda Lupino</h1>
+		<h4>Tu mejor opcion para empezar a cumplir tus sueños</h4>
+		
+	</div>
+
+	<!-- FIN TEXTO CABECERA-->
+
+	<!-- PRODUCTOS DESTACADOS-->
+
+	<section class="prod">
+
+		<!--SISTEMA DE GRILLAS DE BOOSTRAP, ESTAS CONSTAN DE 12 GRILLAS DESDE DONDE PODEMOS PONER 
+		CUANTAS COLUMNAS QUEREMOS QUE TOME LA CAJA DONDE TENEMOS EL CONTENIDO, PRIMERO HAY QUE METER TODO DENTRO
+		DE UN DIV CON CLASE CONTAINER O CONTAINER-FLUID, CON ESTE ULTIMO TOMARA TODO EL ESPACIO DE LA PANTALLA, YA QUE CONTAINER AUTOGENERA UNOS MARGENES A LOS COSTADOS, LUEGO HAY QUE METER TODO DENTRO DE UN DIV CON CLASE ROW, Y DENTRO DE ESTO EMPEZAR A DIVIDIR LAS COLUMNAS, COL-LG-12 SIGNIFICA QUE SE DIVIDIRA EN 12 COLUMNAS EN PANTALLAS LARGE QUE SON DESKTOP -->
+
+		<div class="container-fluid text-center">
+
+			<div class="row">
+
+				<div class="col-lg-12 my-5 pb-5">
+					<h1>Productos Destacados</h1>
+				</div>
+				
+			</div>
+
+			<div class="row">
+				
+				<div class="col-lg-3 col-md-6">
+
+					<div class="producto-destacado-uno">
+						<img width="240" height="300" src="{% static 'core/img/ukelele.jpg'%}">
+						<h3 class="mb-5 text-center">Ukelele acústico tenor Nativa KU-WN-T</h3>
+						
+						<div class="carrito">
+							<i class="fas fa-shopping-cart"></i>
+							<span>Añadir al carrito</span>
+							
+						</div>
+
+
+							<div class="row precios-productos">
+								<h5 class="col-lg-6">Ahora: 69.990</h5>
+								<h6 class="col-lg-6">Antes: 99.990</h6>
+							</div>
+					</div>
+
+
+				</div>
+
+				<div class="col-lg-3 col-md-6">
+
+					<div class="producto-destacado-uno">
+
+
+						<img width="240" height="300" src="{% static 'core/img/bajo.jpg'%}">
+
+					
+					<h3 class="mb-5 text-center">Bajo eléctrico Ibanez GSR205</h3>
+
+						<div class="carrito">
+							<i class="fas fa-shopping-cart"></i>
+							<span>Añadir al carrito</span>
+							
+						</div>
+
+
+					
+
+					<div class="row precios-productos">
+						<h5 class="col-lg-6">Ahora: 69.990</h5>
+						<h6 class="col-lg-6">Antes: 99.990</h6>
+					</div>
+					</div>
+
+
+				</div>
+
+
+				<div class="col-lg-3 col-md-6">
+
+					<div class="producto-destacado-uno">
+
+						<img width="240" height="300" src="{% static 'core/img/piano.jpg'%}">
+					
+					<h3 class="mb-5 text-center">Teclado personal Casio CT-X800</h3>
+
+						<div class="carrito">
+							<i class="fas fa-shopping-cart"></i>
+							<span>Añadir al carrito</span>
+							
+						</div>
+					
+
+					<div class="row precios-productos">
+						<h5 class="col-lg-6">Ahora: 69.990</h5>
+						<h6 class="col-lg-6">Antes: 99.990</h6>
+					</div>
+					</div>
+
+
+				</div>
+
+				<div class="col-lg-3 col-md-6">
+
+					<div class="producto-destacado-uno">
+						<img width="240" height="300" src="{% static 'core/img/platillos.jpg'%}">
+
+					
+					<h3 class="mb-5 text-center">Pack Zildjian de platillos Planet Z PLZ4PK, 14, 16 y 20 pulgadas</h3>
+						<div class="carrito">
+							<i class="fas fa-shopping-cart"></i>
+							<span>Añadir al carrito</span>
+							
+						</div>
+
+					<div class="row precios-productos">
+						<h5 class="col-lg-6 col-md-6 col-sm-6 col-xs-3">Ahora: 69.990</h5>
+						<h6 class="col-lg-6 col-md-6 col-sm-6 col-xs-3">Antes: 99.990</h6>
+					</div>
+					</div>
+
+
+				</div>
+
+
+			
+		</div>
+		
+
+	</section>
+
+	<!-- FIN PRODUCTOS DESTACADOS-->
+
+	
+
+<!-- MARCAS ASOCIADAS -->
+
+<section class="my-5" id="marcas-asociadas">
+    <div class="container text-center my-5 py-3">
+        <div class="row">
+          <div class="col-12 p-4 text-center">
+
+            <!--TITULO DE MARCAS ASOCIADAS -->
+
+            <h2 class="mb-5">Nuestras marcas Asociadas:</h2>
+
+          </div>
+
+          <div class="col-12 text-black pb-5">
+
+            <div id="carousel-marcas" class="carousel slide" data-ride="carousel">
+
+              <ol class="carousel-indicators position-relative">
+                <li data-target="#carousel-marcas" data-slide-to="0" class="active bg-dark"></li>
+                <li data-target="#carousel-marcas" data-slide-to="1" class="bg-dark"></li>
+              </ol>
+          
+
+              <!-- SE DEFINE EL INTERIOR DEL PRIMER CAROUSEL, QUE MOSTRARA 6 MARCAS ASIGNANDOLE 2 COLUMNAS A CADA MARCA Y ADEMAS SERA EL QUE SIEMPRE SE MOSTRARA PRIMERO, POR ESTO LA CLASE ACTIVE-->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+
+                  <div class="row">
+
+                    <div class="col-2">
+
+                    <img src="{% static 'core/img/1.png'%}" width="65px" data-container="body" data-toggle="popover" data-trigger="hover"
+                    data-placement="bottom" data-content="Ziidjian">
+                 
+
+                    </div>
+
+                    <div class="col-2">
+
+                     <img src="{% static 'core/img/3.png'%}" width="65px" data-container="body" data-toggle="popover" data-trigger="hover"
+                    data-placement="bottom" data-content="Roland">
+
+                     
+                    </div>
+
+
+                    <div class="col-2">
+
+                       <img src="{% static 'core/img/2.png'%}" width="65px" data-container="body" data-toggle="popover" data-trigger="hover"
+                    	data-placement="bottom" data-content="Casio">
+
+                    </div>
+
+                    <div class="col-2">
+
+                       <img src="{% static 'core/img/4.png'%}" width="65px" data-container="body" data-toggle="popover" data-trigger="hover"
+                    	data-placement="bottom" data-content="Korg">
+
+                    </div>
+
+                    <div class="col-2">
+
+                       <img src="{% static 'core/img/5.png'%}" width="65px" data-container="body" data-toggle="popover" data-trigger="hover"
+                    	data-placement="bottom" data-content="Jupiter">
+
+                    </div>
+
+                    <div class="col-2">
+
+                       <img src="{% static 'core/img/6.png'%}" width="65px" data-container="body" data-toggle="popover" data-trigger="hover"
+                    	data-placement="bottom" data-content="Senheiser">
+
+                    </div>
+
+
+                  </div>
+
+                </div>
+                <div class="carousel-item">
+
+                    <!-- INTERIOR DEL SEGUNDO CAROUSEL -->
+
+                  <div class="row">
+
+                    <div class="col-2">
+
+                       <img src="{% static 'core/img/7.png'%}" width="65px" data-container="body" data-toggle="popover" data-trigger="hover"
+                    	data-placement="bottom" data-content="Pearl">
+
+                    </div>
+
+                    <div class="col-2">
+
+                      <img src="{% static 'core/img/8.png'%}" width="65px" data-container="body" data-toggle="popover" data-trigger="hover"
+                    	data-placement="bottom" data-content="Ibanez">
+
+                    </div>
+
+
+                    <div class="col-2">
+
+                      <img src="{% static 'core/img/10.png'%}" width="65px" data-container="body" data-toggle="popover" data-trigger="hover"
+                    	data-placement="bottom" data-content="Duran">
+
+                    </div>
+
+                    <div class="col-2">
+
+                       <img src="{% static 'core/img/1.png'%}" width="65px" data-container="body" data-toggle="popover" data-trigger="hover"
+                    	data-placement="bottom" data-content="Ziidjian">
+
+                    </div>
+
+                    <div class="col-2">
+
+                      <img src="{% static 'core/img/2.png'%}" width="65px" data-container="body" data-toggle="popover" data-trigger="hover"
+                    	data-placement="bottom" data-content="Casio">
+
+                    </div>
+
+
+                    <div class="col-2">
+
+                      <img src="{% static 'core/img/5.png'%}" width="65px" data-container="body" data-toggle="popover" data-trigger="hover"
+                    	data-placement="bottom" data-content="Jupiter">
+
+                    </div>
+
+
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+ </section>
+
+ {%endblock contenido %}
+
+ <!--FIN MARCAS ASOCIADAS -->

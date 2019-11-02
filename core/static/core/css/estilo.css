@@ -1,0 +1,1148 @@
+body{
+	
+	margin: 0;
+	padding:0;
+}
+
+/* Desde aqui se da el estilo a cada uno de los elementos dentro del nav */
+nav{
+	z-index:5000000;
+}
+
+nav a{
+	font-family: 'Pacifico', cursive;
+}
+
+.nav-item{
+	margin:.4em 1em;
+}
+
+.nav-link {
+	position:relative;
+	display:block;
+	text-decoration: none;
+	text-align:center;
+	padding:.3em 2em; 
+	font-size:1em;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+/* before agrega contenido antes de la caja nav-link, con esto se da el diseño para que
+sea capaz de mostrar el borde con efecto. Con after sucede lo mismo, pero despues
+del texto*/
+
+.nav-link:before{
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	border-top:2px solid white;
+	z-index:1;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition:0.5s;
+}
+
+.nav-link:hover:before{
+	transform: scaleX(1);
+}
+
+.nav-link:after{
+	content: "";
+	position:absolute;
+	bottom:0;
+	left:0px;
+	width:100%;
+	border-bottom:2px solid white;
+	z-index:1;
+	transform:scaleX(0);
+	transform-origin:left;
+	transition:0.5s;
+}
+
+
+.nav-link:hover:after{
+	transform:scaleX(1);
+}
+
+/* HASTA AQUI SE EDITA EL CSS DEL NAVBAR */
+
+
+
+/*DESDE AQUI SE DA ESTILO AL SLIDER*/
+
+/*algunos codigos de aqui se generan desde los plugin, eso se puede ver inspeccionando la pagina*/
+
+.imagen-slider{
+	margin:0;
+	padding:0;
+	width:100%;
+}
+
+.bx-wrapper{
+	border:0px;
+	box-shadow:0 0 0px;
+}
+
+.bx-wrapper img {
+height: 500px;
+object-fit: cover;
+max-width: auto;
+display: inline;
+}
+
+.bx-wrapper .bx-pager{
+	position:relative;
+	top:-290px;
+	left:20%;
+	float:right;
+	width:43%;
+	color:white;
+	border:0px solid white;
+	transform: rotate(90deg);
+	overflow: hidden;
+
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active{
+	background-color:#ccc;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a{
+	background-color:white;
+}
+
+
+/*FIN DESDE AQUI SE DA ESTILO A SLIDER*/
+
+
+/*TEXTO CABECERA*/
+.texto-cabecera > h1{
+	font-size:3em;
+	font-family: 'Pacifico', cursive;
+	font-size:6em;
+	margin-top:-30%;
+	position:absolute;
+	text-shadow:3px 3px 3px #444;
+	left:5%;
+	color:white;
+}
+
+.texto-cabecera > h4{
+	font-size:1em;
+	font-family: 'Roboto', sans-serif;
+	position:absolute;
+	margin-top:-19%;
+	left:7%;
+	text-shadow: 3px 3px 3px #444;
+	color:white;
+}
+
+#servicio-al-cliente{
+	display: block;
+}
+
+
+
+
+
+
+
+
+/*PRODUCTOS DESTACADOS*/
+
+.prod > .container-fluid{
+	margin-top:0;
+	margin-left:0;
+}
+
+.prod > .container-fluid > .row h1{
+	font-size:2em;
+	font-family: 'Anton', sans-serif;
+	padding:.5em 0em;
+}
+
+
+.producto-destacado-uno{
+	transition:1s;
+}
+
+.producto-destacado-uno > img{
+	transition:1s;
+	object-fit: cover;
+	transition-delay: .5s;
+}
+
+/*.producto-destacado-uno:hover  > img{
+	box-shadow: 1px 2px 2px 1px #ccc;
+}*/
+.producto-destacado-uno > h3{
+	margin-left:0em;
+	margin-top:1em;
+	font-size:1.3em;
+	font-family: 'Teko', sans-serif;
+	background-color:white;
+}
+
+.precios-productos{
+	width:100%;
+	background-color:white;
+	margin-top:1em;
+	font-family: 'Oswald', sans-serif;
+	padding:.1em;
+	margin-left:1em;
+}
+
+.h5, h5{
+	font-size:.9em;
+	margin-left:0em;
+	position:relative;
+	left:-10em;
+	opacity: 0;
+	transition:1s;
+
+}
+
+.h6, h6{
+	font-size:0.8em;
+	margin-top:.2em;
+	text-decoration: line-through;
+	position:relative;
+	color:grey;
+	right:0em;
+	opacity:0;
+	transition:1s;
+}
+
+.producto-destacado-uno:hover h5{
+	left:-.5em;
+	opacity:1;
+}
+
+.producto-destacado-uno:hover h6{
+	right:1em;
+	opacity:1;
+}
+
+
+.carrito > span{
+	
+	color:grey;
+	margin-left:1.5em;
+}
+
+
+.producto-destacado-uno > .carrito{
+	margin-top:-2em;
+	padding:.3em 0em;
+}
+
+.producto-destacado-uno > .carrito > span{
+	color:black;
+	transition-duration: 1s;
+	font-size:.9em;
+}
+
+
+
+
+
+
+.producto-destacado-uno:hover > .carrito > i{
+	font-size: 1em;
+	transition-property: border-radius, color, background-color; 
+	transition-delay: .1s, .2s, .3s;
+	background-color:grey;
+	border-radius: 50%;
+	padding:.8em;
+	transition-duration: .5s;
+	color:white;
+}
+
+.producto-destacado-uno:hover > .carrito > span{
+	color:grey;
+}
+
+
+.producto-destacado-uno > .carrito > i{
+	transition-property: border-radius, color, background-color; 
+	transition-delay: .1s, .2s, .3s;
+	transition:1s;
+	background-color:white;
+	border-radius: 50%;
+	font-size: 1em;
+	padding:.8em;
+}
+
+/* FIN PRODUCTOS DESTACADOS*/
+
+
+/*COMIENZO DE MARCAS ASOCIADAS*/
+
+#carousel-marcas > .mb-5{
+	margin-top:0em;
+}
+
+#marcas-asociadas{
+	padding-bottom:3em;
+}
+
+#marcas-asociadas > .container > .row > .col-12 > h2{
+
+	font-family: 'Anton', sans-serif;
+	font-size:2em;
+	padding-bottom: 2em;
+}
+
+.carousel-indicators{
+
+  top:130px;
+
+ }
+
+
+/*FIN MARCAS ASOCIADAS*/
+
+/*FOOTER*/
+
+footer{
+	background-color:grey;
+	padding:1em 2em;
+	width:100%;
+
+}
+
+footer a{
+	color:white;
+}
+
+footer a:hover{
+	color:white;
+}
+
+ footer > .footer-lupino{
+ 	background-color:grey;
+ }
+
+ footer > .footer-lupino > .row > .col-lg-4 > h1{
+ 	font-size:20px;
+ 	font-family: 'Source Sans Pro', sans-serif;
+ 	color:white;
+ 	text-align: center;
+ }
+
+  footer > .footer-lupino > .row > .col-lg-4 > p{
+ 	font-size:.8em;
+ 	color:white;
+ 	text-align: center;
+ }
+
+   footer > .footer-lupino > .row > .col-lg-4 > ul > li{
+ 	font-size:.8em;
+ 	font-family: 'Source Sans Pro', sans-serif;
+ 	color:white;
+ }
+
+#redes-sociales{
+	width:100%;
+	height:100px;
+	color:white;
+	margin-left:.7em;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+
+#fb-icon{
+	width:2.2em;
+	height:2.2em;
+	border-radius:50%;
+	margin:0em .5em;
+	transition-property:transform, background; 
+	transition-duration: 1s;
+	display:flex;
+	align-items: center;
+}
+
+#twitter-icon{
+	width:2.2em;
+	height:2.2em;
+	border-radius:50%;
+	transition-property:transform, background; 
+	transition-duration: 1s;
+	margin:0em .5em;
+	display:flex;
+	align-items: center;
+}
+
+#ig-icon{
+	width:2.2em;
+	height:2.2em;
+	text-align: center;
+	border-radius: 50%;
+	transition-property:transform, background; 
+	transition-duration: 1s;
+	margin:0em .5em;
+	display:flex;
+	align-items: center;
+
+}
+
+#twitter-icon i {
+	margin-left:-.3em;
+}
+
+#ig-icon i {
+	margin-left:-.3em;
+}
+
+#twitter-icon:hover{
+
+	background-color:#00ACEE;
+	transform:rotateX(360deg);
+	border-radius:50%;
+	cursor:pointer;
+
+}
+
+#ig-icon:hover{
+
+	background-color:#8a3ab9;
+	transform:rotateX(360deg);
+	border-radius:50%;
+	cursor:pointer;
+
+}
+
+#fb-icon:hover{
+
+	background-color:#3b5996;
+	transform:rotateX(360deg);
+	border-radius:50%;
+	cursor:pointer;
+
+}
+
+@media (max-width: 786px){
+
+	footer > .footer-lupino > .row > .col-lg-4 > h1{
+
+		padding:1em 0em;
+ }
+
+  footer > .footer-lupino > .row > .col-lg-4 > p{
+
+  	padding:1em 0em;
+ }
+
+   footer > .footer-lupino > .row > #servicio-al-cliente >ul {
+
+   	padding:1em 0em;
+   	text-align: center;
+   	/*PARA DESAPARECER SERVICIO AL CLIENTE*/
+   	display:block;
+   	list-style: none;
+ }
+
+#redes-sociales{
+	padding:1em 0em;
+
+}
+
+}
+
+
+
+
+/*FIN FOOTER*/
+
+
+/*AQUI SE COMIENZA A DAR AESTILO A PRODUCTOS.HTML*/
+
+.contenedor-titulo-prod{
+	margin-top:4em;
+	margin-bottom:-4em;
+	text-transform: uppercase; 
+	color:#555;
+	padding:0em 0em;
+	font-size:1.5em;
+}
+
+/*PRODUCTOS POPULARES*/
+
+.producto-popular > .carrito{
+	font-size:.9em;
+}
+
+.producto-popular > .precios-productos > h5{
+	font-size:.7em;
+	margin-top:-1em;
+}
+
+.producto-popular > .precios-productos > h6{
+	font-size:.6em;
+	margin-top:-1em;
+}
+
+
+.producto-lista{
+	margin-top:7em;
+}
+
+.contenedor-productos-populares{
+	width:100%;
+	margin-left:0%;
+	margin-top:5em;
+	border-top:1px solid #ccc;
+	padding-top:1em;
+	margin-bottom:3em;
+	border-bottom:1px solid #ccc;
+}
+
+
+.producto-popular > h3.mb-5.text-center{
+	font-size:1em;
+}
+
+
+
+
+#titulo-productos-mas-populares{
+	margin-top:3em;
+	margin-bottom:-3em;
+	margin-left:1em;
+	font-size:1.5em;
+	text-transform: uppercase;
+	color:#666;
+}
+
+.contenedor-titulo-list-productos > .col-lg-12 > h1{
+	color:#555;
+	text-transform: uppercase;
+}
+
+
+.contenedor-listado-productos{
+
+	position:relative;
+	width:80%;
+	left:10%;
+	background-color: white;
+	margin-bottom:10em;
+
+}
+
+aside > ul{
+	position:absolute;
+	width:20%;
+	background-color:white;
+	min-height:60em;
+	list-style: none;
+	letter-spacing: .1em;
+	padding-top:2em;
+}
+
+aside {
+	display:block;
+}
+
+
+
+.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos{
+	width:100%;
+	margin-top:-3em;
+	background-color:white;
+}
+
+.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > .carrito > i{
+
+    transition-property: border-radius, color, background-color; 
+	transition-delay: .1s, .2s, .3s;
+	transition:1s;
+	background-color:white;
+	border-radius: 50%;
+	font-size: .8em;
+	padding:.8em;
+
+}
+
+.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado:hover > .precios-productos > .carrito > i{
+
+    font-size: .8em;
+	transition-property: border-radius, color, background-color; 
+	transition-delay: .1s, .2s, .3s;
+	background-color:grey;
+	border-radius: 50%;
+	padding:.8em;
+	transition-duration: .5s;
+	color:white;
+}
+
+
+#hideonmobile{
+	display:block;
+}
+
+
+
+/*AQUI SE TERMINA DE DAR ESTILO A PRODUCTOS.HTML*/
+
+
+
+
+
+
+/*AQUI SE PROGRAMA MISION Y VISION*/
+
+#titulo-mision-vision{
+	font-size: 2em;
+	margin-top:2em;
+	margin-bottom:3em;
+	width:100%;
+	background-color:grey;
+	text-align: center;
+	text-transform: uppercase;
+	background-image: url('../img/Tienda/teclas1.jpeg'); 
+	font-family: 'Roboto', sans-serif;
+	color:white;
+	background-repeat: no-repeat;
+	background-size: cover;
+	letter-spacing:.3em;
+}
+
+#titulo-mision-vision > h1{
+	padding:2em 0em;
+	text-shadow:2px 2px 2px #444;
+}
+
+.container > .row > .contenedor-vision{
+	padding:3em 3em;
+
+}
+
+.container > .row > .contenedor-mision{
+	padding:3em 3em;
+}
+
+.container > .row > .contenedor-lupino-agradece > h4{
+	font-size:1em;
+	display:block;
+	padding:1em 0em;
+}
+
+/*FIN MISION Y VISION*/
+
+
+
+/*TIENDA*/
+
+.tienda > .container-fluid{
+	margin-top:10px;
+	margin-left:0;
+}
+
+.tienda > .container-fluid > .row h1{
+	font-size:2em;
+	font-family: 'Anton', sans-serif;
+	padding:.5em 0em;
+}
+
+.parrafo-tienda{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	padding-left: 30px;
+	padding-right: 30px;	
+	margin-top: -100px
+}
+
+.parrafo-tienda > row > p{
+	
+	font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.row-fila-galeria-tienda{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+	margin: 10px;
+	background-color: grey;
+}
+
+.titulo-galeria-tienda {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	align-items: center;
+	justify-content: center;
+}
+
+.titulo-galeria-tienda > h4 {
+	font-family: 'Anton', sans-serif;
+	color: white;
+	margin-bottom: 10px;
+	padding: 0;
+	text-align: center;
+	text-shadow: 2px 2px black;
+}
+
+.contenedor-galeria-tienda{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.contenedor-galeria-tienda > a > img{
+	width: 240px;
+	margin: 3px;
+	text-align: center;
+	transition: all 0.5s;
+}
+
+.contenedor-galeria-tienda > a > img:hover{
+	transform: scale(0.9);
+}
+/*FIN TIENDA*/
+
+
+/*INICIO CONTACTO*/
+.btnEnviar-contacto{
+	float: inline-end;
+	width: 100%;
+}
+.contacto{
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.mapa{
+	width: 99%;
+	padding: 1%;
+	padding-left: 10px;
+}
+
+/*FIN CONTACTO*/
+
+
+/*INGRESAR INSTRUMENTO*/
+
+#formulario-ingresar-instrumento{
+	width:50%;
+	margin-left:25%;
+	margin-top:5%;
+	padding-bottom:6em;
+}
+
+#titulo-ingresar-instrumento{
+	color:black;
+	width:50%;
+	margin-top:4em;
+	margin-left:25%;
+}
+
+/*FIN INGRESAR INSTRUMENTO*/
+
+
+
+
+/*MEDIA QUERYS*/
+
+
+/* TEXTO CABECERA VERSION MOBILE*/
+
+@media only screen and (min-width: 320px) and (max-width: 479px){ 
+
+    .texto-cabecera > h1{
+	font-family: 'Pacifico', cursive;
+	font-size:2.8em;
+	margin-top:-76%;
+	position:absolute;
+	left:5%;
+	color:white;
+	}
+
+
+
+/*Aca empieza el contacto en celular*/
+	.div-mapa{
+	margin-left:45px;
+		
+	}
+		
+	.mapa{
+	margin: 5px;
+	height: 272px;
+	width: 279px;
+	}
+		
+	.btnEnviar-contacto{
+	margin: 0px;
+	}
+		
+	.divbtnEnviar-contacto{
+	margin-left:2px;
+	width: 30%;
+	margin-left: 210px;
+	}
+		
+	.test{
+	padding:0px;
+	padding-right: 30px;
+	padding-left: 20px;
+	}
+
+	.div-mapa{
+	padding-right: 0px;
+	}
+/*FIN CONTACTO CELULAR*/
+
+footer > #servicio-al-cliente{
+	display: none;
+}
+
+.texto-cabecera > h4{
+	font-size:1em;
+	font-family: 'Roboto', sans-serif;
+	position:absolute;
+	margin-top:-60%;
+	left:7%;
+	color:white;
+}
+
+ }
+
+
+
+
+ /**/
+
+/*TABLETS*/
+ @media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 991px) {
+
+	.texto-cabecera > h1{
+	font-family: 'Pacifico', cursive;
+	font-size:2.8em;
+	margin-top:-30%;
+	position:absolute;
+	left:5%;
+	color:white;
+	}
+
+
+	/*CONTACTO TABLET*/
+	.div-mapa{
+		margin-left:45px;
+	
+	}
+	
+	.mapa{
+			margin: 5px;
+			height: 272px;
+			width: 679px;
+			
+	}
+	
+	.btnEnviar-contacto{
+		margin: 0px;
+	}
+	
+	.divbtnEnviar-contacto{
+			
+			margin-left:2px;
+			width: 20%;
+			margin-left: 550px;
+	}
+	
+	.test{
+			padding:0px;
+			padding-right: 30px;
+			padding-left: 20px;
+	}
+
+	/* FIN CONTACTO TABLET*/
+
+}
+
+/*FIN TEXTO CABECERA*/
+
+
+ /*CELULAR*/
+@media only screen and (min-width: 480px) and (max-width: 767px){
+
+
+	.texto-cabecera > h1{
+	font-family: 'Pacifico', cursive;
+	font-size:4em;
+	margin-top:-50%;
+	position:absolute;
+	left:5%;
+	color:white;
+	}
+
+	.texto-cabecera > h4{
+	font-size:.8em;
+	font-family: 'Roboto', sans-serif;
+	position:absolute;
+	margin-top:-32%;
+	left:7%;
+	color:white;
+	}
+
+	aside{
+	display:none;
+	}
+
+   .contenedor-listado-productos{
+
+	position:relative;
+	width:100%;
+	left:0%;
+	background-color: white;
+	margin-bottom:10em;
+
+	}
+
+	#hideonmobile{
+	display:none;
+	}
+
+
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > .carrito > i{
+
+	margin-left:-15em;
+
+	}
+
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > h5{
+	width:50%;
+	margin-top:-2em;
+	margin-left:2em;
+	}
+
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > h6{
+	width:50%;
+	margin-top:-2.1em;
+	margin-left:10em;
+	}
+
+}
+
+
+
+
+
+ @media only screen and (min-device-width : 768px) and (max-device-width : 991px) {
+
+ 	aside{
+		display:none;
+	}
+}
+
+
+
+
+
+
+
+/*PANTALLA IPHONE 6/7/8*/
+@media only screen and (min-width: 375px) and (max-width: 667PX){
+
+
+	.contenedor-titulo-prod > .col-lg-12 > h1{
+		text-align: center;
+	}
+
+	.contenedor-titulo-list-productos > .col-lg-12 > h1{
+
+		text-align: center;
+	}
+
+	.contenedor-listado-productos{
+
+	position:relative;
+	width:100%;
+	left:0%;
+	background-color: white;
+	margin-bottom:10em;
+
+	}
+
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > .carrito > i{
+
+	margin-left:-15em;
+
+	}
+
+	aside{
+		display:none;
+	}
+
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > h5{
+	width:50%;
+	margin-top:-2em;
+	margin-left:17em;
+	}
+
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > h6{
+	width:50%;
+	margin-top:-2.1em;
+	margin-left:20em;
+	}
+
+	.container > .row > .contenedor-lupino-agradece > h4{
+		display:none;
+	}
+}
+
+/*PANTALLA GALAXY S5*/
+@media only screen and (min-width: 360px) and (max-width: 640PX){
+
+	.contenedor-listado-productos{
+
+	position:relative;
+	width:100%;
+	left:0%;
+	background-color: white;
+	margin-bottom:10em;
+
+	}
+
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > .carrito > i{
+
+	margin-left:-15em;
+
+	}
+
+	aside{
+		display:none;
+	}
+
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > h5{
+	width:50%;
+	margin-top:-2em;
+	margin-left:5em;
+	}
+
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > h6{
+	width:50%;
+	margin-top:-2.1em;
+	margin-left:15em;
+	}
+}
+
+/*PANTALLA IPAD*/
+
+@media only screen and (min-width: 750px) and (max-width: 999PX){
+
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > .carrito > i{
+
+	margin-left:-20em;
+
+	}
+
+	footer > .footer-lupino > .row > #servicio-al-cliente >ul {
+
+   	padding:1em 0em;
+   	text-align: center;
+   	/*PARA DESAPARECER SERVICIO AL CLIENTE*/
+   	display:block;
+   	list-style: none;
+ 	}
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1024PX){
+
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > .carrito > i{
+
+	margin-left:-15em;
+
+	}
+
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > h5{
+	width:50%;
+	margin-top:-2em;
+	margin-left:4.5em;
+	}
+
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > h6{
+	width:50%;
+	margin-top:-2.3em;
+	margin-left:14em;
+	}
+
+
+}
+
+
+
+/*IPAD PRO*/
+@media only screen and (min-width: 1024px) and (max-width: 1366PX){
+
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > .carrito > i{
+
+	margin-left:-5em;
+
+	}
+
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > h5{
+	width:50%;
+	margin-top:.5em;
+	margin-left:-4.5em;
+	}
+
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > h6{
+	width:50%;
+	margin-top:-3.3em;
+	margin-left:7em;
+	}
+
+	.producto-popular > .carrito{
+	font-size:.7em;
+	}
+
+}
+
+
+#marcas-listado{
+	display:none;
+	font-size:2em;
+}
+
+
+@media only screen and (min-width: 433px) and (max-width: 508PX){
+
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > h5{
+	width:50%;
+	margin-top:-2em;
+	margin-left:7em;
+	}
+
+}
+
+/*/*PANTALLA IPHONE 5/SE *//*
+@media only screen and (min-width: 320px) and (max-width: 568PX){
+	.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > h5{
+	width:50%;
+	margin-top:-2em;
+	margin-left:3em;
+}
+
+.contenedor-listado-productos > .row >  .col-lg-3 > .producto-listado > .precios-productos > h6{
+	width:50%;
+	margin-top:-2.1em;
+	margin-left:12em;
+}
+}
+
+/*FIN MEDIAQUERYS*/
+
+
+
+

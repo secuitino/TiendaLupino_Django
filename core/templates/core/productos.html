@@ -1,0 +1,457 @@
+{% extends 'core/base.html'%}
+
+{% load static %}
+
+	{% block css %}
+	
+    {% endblock %}
+
+	{% block javascript %}
+
+ 	{%endblock%}
+
+
+     {%block contenido %}
+
+     	<div class="row container contenedor-titulo-prod">
+		<div class="col-lg-12 text-left">
+			<h1 class="my-5 py-5">Productos Populares</h1>
+			
+		</div>
+		
+	</div>
+
+
+	<section class="prod contenedor-productos-populares">
+
+		<!--SISTEMA DE GRILLAS DE BOOSTRAP, ESTAS CONSTAN DE 12 GRILLAS DESDE DONDE PODEMOS PONER 
+		CUANTAS COLUMNAS QUEREMOS QUE TOME LA CAJA DONDE TENEMOS EL CONTENIDO, PRIMERO HAY QUE METER TODO DENTRO
+		DE UN DIV CON CLASE CONTAINER O CONTAINER-FLUID, CON ESTE ULTIMO TOMARA TODO EL ESPACIO DE LA PANTALLA, YA QUE CONTAINER AUTOGENERA UNOS MARGENES A LOS COSTADOS, LUEGO HAY QUE METER TODO DENTRO DE UN DIV CON CLASE ROW, Y DENTRO DE ESTO EMPEZAR A DIVIDIR LAS COLUMNAS, COL-LG-12 SIGNIFICA QUE SE DIVIDIRA EN 12 COLUMNAS EN PANTALLAS LARGE QUE SON DESKTOP -->
+
+		<div class="container-fluid text-center productos-populares">
+
+			<div class="row">
+				
+				<div class="col-lg-2 col-md-6">
+
+					<div class="producto-destacado-uno producto-popular">
+						<img width="180" height="240" src="{% static 'core/img/metalofono.jpg'%}">
+						<h3 class="mb-5 text-center">Metalofono</h3>
+						
+						<div class="carrito">
+							<i class="fas fa-shopping-cart"></i>
+							<span>Añadir al carrito</span>
+							
+						</div>
+
+
+							<div class="row precios-productos">
+								<h5 class="col-lg-6">Ahora: 69.990</h5>
+								<h6 class="col-lg-6">Antes: 99.990</h6>
+							</div>
+					</div>
+
+
+				</div>
+
+				<div class="col-lg-2 col-md-6">
+
+					<div class="producto-destacado-uno producto-popular">
+						<img width="180" height="240" src="{% static 'core/img/pandero.jpg'%}">
+						<h3 class="mb-5 text-center">Pandero Baldassare</h3>
+						
+						<div class="carrito">
+							<i class="fas fa-shopping-cart"></i>
+							<span>Añadir al carrito</span>
+							
+						</div>
+
+
+							<div class="row precios-productos">
+								<h5 class="col-lg-6">Ahora: 69.990</h5>
+								<h6 class="col-lg-6">Antes: 99.990</h6>
+							</div>
+					</div>
+
+
+				</div>
+
+				<div class="col-lg-2 col-md-6">
+
+					<div class="producto-destacado-uno producto-popular">
+
+
+						<img width="180" height="240" src="{% static 'core/img/triangulo.jpg'%}">
+
+					
+					<h3 class="mb-5 text-center">Triangulo Baldassare</h3>
+
+						<div class="carrito">
+							<i class="fas fa-shopping-cart"></i>
+							<span>Añadir al carrito</span>
+							
+						</div>
+
+
+					
+
+					<div class="row precios-productos">
+						<h5 class="col-lg-6">Ahora: 69.990</h5>
+						<h6 class="col-lg-6">Antes: 99.990</h6>
+					</div>
+					</div>
+
+
+				</div>
+
+
+				<div class="col-lg-2 col-md-6">
+
+					<div class="producto-destacado-uno producto-popular">
+
+						<img width="180" height="240" src="{% static 'core/img/melodica.jpg'%}">
+					
+					<h3 class="mb-5 text-center">Teclado personal Casio CT-X800</h3>
+
+						<div class="carrito">
+							<i class="fas fa-shopping-cart"></i>
+							<span>Añadir al carrito</span>
+							
+						</div>
+					
+
+					<div class="row precios-productos">
+						<h5 class="col-lg-6">Ahora: 69.990</h5>
+						<h6 class="col-lg-6">Antes: 99.990</h6>
+					</div>
+					</div>
+
+
+				</div>
+
+				<div class="col-lg-2 col-md-6">
+
+					<div class="producto-destacado-uno producto-popular">
+
+						<img width="180" height="240" src="{% static 'core/img/packbajo.jpg'%}">
+					
+					<h3 class="mb-5 text-center">Pack Ltd de bajo eléctrico B-10</h3>
+
+						<div class="carrito">
+							<i class="fas fa-shopping-cart"></i>
+							<span>Añadir al carrito</span>
+							
+						</div>
+					
+
+					<div class="row precios-productos">
+						<h5 class="col-lg-6">Ahora: 69.990</h5>
+						<h6 class="col-lg-6">Antes: 99.990</h6>
+					</div>
+					</div>
+
+
+				</div>
+
+				<div class="col-lg-2 col-md-6">
+
+					<div class="producto-destacado-uno producto-popular">
+
+						<img width="180" height="240" src="{% static 'core/img/piano.jpg'%}">
+					
+					<h3 class="mb-5 text-center">Teclado personal Casio CT-X800</h3>
+
+						<div class="carrito">
+							<i class="fas fa-shopping-cart"></i>
+							<span>Añadir al carrito</span>
+							
+						</div>
+					
+
+					<div class="row precios-productos">
+						<h5 class="col-lg-6">Ahora: 69.990</h5>
+						<h6 class="col-lg-6">Antes: 99.990</h6>
+					</div>
+					</div>
+
+
+				</div>
+
+
+			
+		</div>
+		
+
+	</section>
+
+	<div class="row container-fluid my-5 py-5 text-left contenedor-titulo-list-productos">
+		<div class="col-lg-12">
+			<h1> Listado de Productos</h1>
+			
+		</div>
+		
+	</div>
+
+	<aside>
+		<ul>
+			<li> > Marcas</li>
+			<li> > Productos</li>
+			<li> > Ofertas</li>
+			<li> > Destacados</li>
+			<li> > Mas vendidos</li>
+		</ul>
+	</aside>
+
+
+	<div class="container-fluid contenedor-listado-productos text-center">
+
+		<div class="row">
+
+				<div class="col-lg-3 col-md-6 col-sm-4">
+
+					<div class="producto-destacado-uno producto-popular producto-listado">
+						<img width="180" height="240" src="{% static 'core/img/saxolista.jpg'%}">
+						<h3 class="mb-5 text-center">Saxo Alto Baldassare 6430L</h3>
+						
+
+						<div class="row precios-productos">
+							<div class="carrito col-lg-4">
+								<i class="fas fa-shopping-cart"></i>
+							</div>
+								<h5 class="col-lg-4">Ahora: 69.990</h5>
+								<h6 class="col-lg-4">Antes: 99.990</h6>
+						</div>
+					</div>
+
+
+				</div> 
+
+
+				<div class="col-lg-3 col-md-6 col-sm-4">
+
+					<div class="producto-destacado-uno producto-popular producto-listado">
+						<img width="180" height="240" src="{% static 'core/img/ukelelelista.jpg'%}">
+						<h3 class="mb-5 text-center">Ukelele acústico tenor Nativa KU-WN-T</h3>
+						
+
+						<div class="row precios-productos">
+							<div class="carrito col-lg-4">
+								<i class="fas fa-shopping-cart"></i>
+							</div>
+								<h5 class="col-lg-4">Ahora: 69.990</h5>
+								<h6 class="col-lg-4">Antes: 99.990</h6>
+						</div>
+					</div>
+
+
+				</div> 
+
+				<div class="col-lg-3 col-md-6 col-sm-4">
+
+					<div class="producto-destacado-uno producto-popular producto-listado">
+						<img width="180" height="240" src="{% static 'core/img/baterialista.jpg'%}">
+						<h3 class="mb-5 text-center">Bateria para niños Powerdrums</h3>
+						
+
+						<div class="row precios-productos">
+							<div class="carrito col-lg-4">
+								<i class="fas fa-shopping-cart"></i>
+							</div>
+								<h5 class="col-lg-4">Ahora: 129.990</h5>
+								<h6 class="col-lg-4">Antes: 200.000</h6>
+						</div>
+					</div>
+
+
+				</div> 
+
+				<div id="hideonmobile" class="col-lg-3 col-md-6 col-sm-4">
+
+					<div class="producto-destacado-uno producto-popular producto-listado">
+						<img width="180" height="240" src="{% static 'core/img/baterialista2.jpg'%}">
+						<h3 class="mb-5 text-center">Bateria Acustica Tama</h3>
+						
+
+						<div class="row precios-productos">
+							<div class="carrito col-lg-4">
+								<i class="fas fa-shopping-cart"></i>
+							</div>
+								<h5 class="col-lg-4">Ahora: 69.990</h5>
+								<h6 class="col-lg-4">Antes: 99.990</h6>
+						</div>
+					</div>
+
+
+				</div> 
+
+			
+		</div>
+
+
+				<div class="row">
+
+				<div class="col-lg-3 col-md-6 col-sm-4">
+
+					<div class="producto-destacado-uno producto-popular producto-listado">
+						<img width="180" height="240" src="{% static 'core/img/ukelelelista2.jpg'%}">
+						<h3 class="mb-5 text-center">Ukelele acústico tenor Nativa KU-WN-T</h3>
+						
+
+						<div class="row precios-productos">
+							<div class="carrito col-lg-4">
+								<i class="fas fa-shopping-cart"></i>
+							</div>
+								<h5 class="col-lg-4">Ahora: 69.990</h5>
+								<h6 class="col-lg-4">Antes: 99.990</h6>
+						</div>
+					</div>
+
+
+				</div> 
+
+
+				<div class="col-lg-3 col-md-6 col-sm-4">
+
+					<div class="producto-destacado-uno producto-popular producto-listado">
+						<img width="180" height="240" src="{% static 'core/img/tecladopersonallista.jpg'%}">
+						<h3 class="mb-5 text-center">Teclado Personal Casio</h3>
+						
+
+						<div class="row precios-productos">
+							<div class="carrito col-lg-4">
+								<i class="fas fa-shopping-cart"></i>
+							</div>
+								<h5 class="col-lg-4">Ahora: 69.990</h5>
+								<h6 class="col-lg-4">Antes: 99.990</h6>
+						</div>
+					</div>
+
+
+				</div> 
+
+				<div class="col-lg-3 col-md-6 col-sm-4">
+
+					<div class="producto-destacado-uno producto-popular producto-listado">
+						<img width="180" height="240" src="{% static 'core/img/clarinetelista.jpg'%}">
+						<h3 class="mb-5 text-center">Clarinete</h3>
+						
+
+						<div class="row precios-productos">
+							<div class="carrito col-lg-4">
+								<i class="fas fa-shopping-cart"></i>
+							</div>
+								<h5 class="col-lg-4">Ahora: 99.990</h5>
+								<h6 class="col-lg-4">Antes: 130.990</h6>
+						</div>
+					</div>
+
+
+				</div> 
+
+				<div id="hideonmobile" class="col-lg-3 col-md-6">
+
+					<div class="producto-destacado-uno producto-popular producto-listado">
+						<img width="180" height="240" src="{% static 'core/img/unetaslista.jpg'%}">
+						<h3 class="mb-5 text-center">Pack de 6 uñetas Ibanez</h3>
+						
+
+						<div class="row precios-productos">
+							<div class="carrito col-lg-4">
+								<i class="fas fa-shopping-cart"></i>
+							</div>
+								<h5 class="col-lg-4">Ahora: 69.990</h5>
+								<h6 class="col-lg-4">Antes: 99.990</h6>
+						</div>
+					</div>
+
+
+				</div> 
+
+			
+		</div>
+
+
+		<div class="row">
+
+				<div class="col-lg-3 col-md-6 col-sm-4">
+
+					<div class="producto-destacado-uno producto-popular producto-listado">
+						<img width="180" height="240" src="{% static 'core/img/bajoelectroacusticolista.jpg'%}">
+						<h3 class="mb-5 text-center">Bajo Electro Acustico</h3>
+						
+
+						<div class="row precios-productos">
+							<div class="carrito col-lg-4">
+								<i class="fas fa-shopping-cart"></i>
+							</div>
+								<h5 class="col-lg-4">Ahora: 69.990</h5>
+								<h6 class="col-lg-4">Antes: 99.990</h6>
+						</div>
+					</div>
+
+
+				</div> 
+
+				<div class="col-lg-3 col-md-6 col-sm-4">
+
+					<div class="producto-destacado-uno producto-popular producto-listado">
+						<img width="180" height="240" src="{% static 'core/img/amplificadorbajo.jpg'%}">
+						<h3 class="mb-5 text-center">Ukelele acústico tenor Nativa KU-WN-T</h3>
+						
+
+						<div class="row precios-productos">
+							<div class="carrito col-lg-4">
+								<i class="fas fa-shopping-cart"></i>
+							</div>
+								<h5 class="col-lg-4">Ahora: 69.990</h5>
+								<h6 class="col-lg-4">Antes: 99.990</h6>
+						</div>
+					</div>
+
+
+				</div> 
+
+				<div class="col-lg-3 col-md-6 col-sm-4">
+
+					<div class="producto-destacado-uno producto-popular producto-listado">
+						<img width="180" height="240" src="{% static 'core/img/violinlista.jpg'%}">
+						<h3 class="mb-5 text-center">Violin Freeman Classic</h3>
+						
+
+						<div class="row precios-productos">
+							<div class="carrito col-lg-4">
+								<i class="fas fa-shopping-cart"></i>
+							</div>
+								<h5 class="col-lg-4">Ahora: 69.990</h5>
+								<h6 class="col-lg-4">Antes: 99.990</h6>
+						</div>
+					</div>
+
+
+				</div> 
+
+				<div id="hideonmobile" class="col-lg-3 col-md-6">
+
+					<div class="producto-destacado-uno producto-popular producto-listado">
+						<img width="180" height="240" src="{% static 'core/img/ukelele.jpg'%}">
+						<h3 class="mb-5 text-center">Ukelele acústico tenor Nativa KU-WN-T</h3>
+						
+
+						<div class="row precios-productos">
+							<div class="carrito col-lg-4">
+								<i class="fas fa-shopping-cart"></i>
+							</div>
+								<h5 class="col-lg-4">Ahora: 69.990</h5>
+								<h6 class="col-lg-4">Antes: 99.990</h6>
+						</div>
+					</div>
+
+
+				</div> 
+			
+		</div>
+		
+	</div>
+
+
+     {%endblock%}

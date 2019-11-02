@@ -1,0 +1,75 @@
+{% extends 'core/base.html'%}
+
+{% load static %}
+
+	{% block css %}
+
+	
+    {% endblock %}
+
+	{% block javascript %}
+
+
+ 	{%endblock%}
+    
+    {%block contenido%}
+
+        <section>
+<div>
+    <h1 class="text-center my-4 pt-5">Formulario de Contacto</h1>
+</div>
+     
+
+    </section>
+    <!-- AQUI SE PROGRAMA CADA PAGINA-->
+    <div class="row pb-5">
+
+   <div class="col-lg-6 test">
+
+  
+    <form  class="formulario-Contacto" id="formulario-Contacto">
+
+            <div class="contenedor-formulario pl-5 pr-3">
+                    <div class="form-row contacto">
+                            <div class="form-group col-lg-12 panel panel-primary">
+                                <label class="" for="nombreContacto">Nombre</label>
+                                <input type="text" name="nombreContacto" class="form-control border border-secondary" id="nombreContacto" placeholder="Ingrese Su Nombre">
+                            </div>
+                
+                            <div class="form-group col-lg-12 ">
+                                <label for="emailContacto">Email</label>
+                                <input type="email" name="emailContacto" class="form-control border border-secondary" id="emailContacto" placeholder="Ingrese su Correo">
+                                <small id="emailContacto" class="form-text text-muted">No compartiremos tu correo con nadie más.</small>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label for="telefonoContacto">Telefono</label>
+                                <input type="number" name="telefonoContacto" class="form-control border-secondary" id="telefonoContacto" placeholder="Ingrese su Telefono">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label for="mensajeContacto">Mensaje</label>
+                                <textarea class="form-control  border-secondary" name="mensajeContacto" id="mensajeContacto" placeholder="Dejenos su mensaje aqui" rows="3"></textarea>
+                            </div>
+                            <div class="divbtnEnviar-contacto pl-2"> 
+                                <button type="button" name="btnEnviar-contacto" id="btnEnviar-contacto" class="btnEnviar-contacto btn-light form-group border-secondary rounded">Enviar</button>
+                            </div>
+                        </div>
+                </div>
+
+    </form>
+</div>
+
+<div class="col-lg-6 pt-4 div-mapa ">
+    <div class="contenedor-mapa border border-secondary rounded">
+            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.371361448451!2d-71.22710068520539!3d-29.911209332052028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDU0JzQwLjQiUyA3McKwMTMnMjkuNyJX!5e0!3m2!1ses!2scl!4v1568334700378!5m2!1ses!2scl" width="562" height="380" frameborder="0" style="border:0;" allowfullscreen="true"></iframe>
+    </div>
+</div>
+</div> 
+
+<div class="container-fluid text-center py-4">
+    
+    <hr>
+    <p>Estamos Ubicados en el Mall Plaza La Serana</p>
+    <p>Calle Alberto Solari 1400, Local 105</p>
+    <hr>
+</div>
+    {%endblock%}

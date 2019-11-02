@@ -1,0 +1,91 @@
+{% extends 'core/base.html'%}
+
+{% load static %}
+
+	{% block css %}
+
+    <link rel="stylesheet" href="{% static 'core/css/fresco.css'%}">
+	
+    {% endblock %}
+
+	{% block javascript %}
+
+    <script src="{% static 'core/js/fresco.js'%}"></script>
+
+ 	{%endblock%}
+    
+    {%block contenido%}
+
+    <section class="tienda">
+		<div class="container-fluid text-center">
+
+			<div class="row">
+
+				<div class="col-lg-12 my-5 pb-5">
+					<h1>Tienda</h1>
+				</div>
+				
+			</div>
+
+		</div>
+		<div class="parrafo-tienda">
+			<div class="row">
+					<p>En Tiendas Lupino siempre estamos preocupados de 
+						entregarte los mejores productos junto a las mejores 
+						marcas. Revisa nuestras secciónes y encuentra justo
+					lo que necesitas para cumplir tus sueños. <br>
+					Aquí podrás ver nuestra tienda y algunos de los 
+						productor que tenemos en exhibición para ti. 
+						Ven y disfruta de tu pasión junto a nosotros!
+					</p>
+
+			</div>
+		</div>
+		<div class=" row row-fila-galeria-tienda">
+			<div class="titulo-galeria-tienda col-md-12 col-lg-2">
+					<h4>Sección cuerdas</h4>
+			</div>
+			<div class="contenedor-galeria-tienda col-md-12 col-lg-10">
+					<a href="{% static 'core/img/cuerda1.jpeg'%}" class="fresco" data-fresco-group="galeria1">
+						<img src="{% static 'core/img/cuerda1.jpeg'%}" alt="Tienda1">
+					</a>
+					<a href="{% static 'core/img/cuerda2.jpeg'%}" class="fresco" data-fresco-group="galeria1">
+						<img src="{% static 'core/img/cuerda2.jpeg'%}" alt="Tienda1">
+					</a>
+					<a href="{% static 'core/img/cuerda3.jpeg'%}" class="fresco" data-fresco-group="galeria1">
+						<img src="{% static 'core/img/cuerda3.jpeg'%}" alt="Tienda1">
+					</a>
+					<a href="{% static 'core/img/cuerda4.jpeg'%}" class="fresco" data-fresco-group="galeria1">
+						<img src="{% static 'core/img/cuerda4.jpeg'%}" alt="Tienda1">
+					</a>
+				</div>
+		</div>
+		<div class=" row row-fila-galeria-tienda">
+			<div class="titulo-galeria-tienda col-md-12 col-lg-2">
+					<h4>Sección teclados y pianos</h4>
+			</div>
+			<div class="contenedor-galeria-tienda col-md-12 col-lg-10">
+					<a href="{% static 'core/img/teclas1.jpeg'%}" class="fresco" data-fresco-group="galeria1">
+						<img src="{% static 'core/img/teclas1.jpeg'%}" alt="Tienda1">
+					</a>
+					<a href="{% static 'core/img/teclas2.jpeg'%}" class="fresco" data-fresco-group="galeria1">
+						<img src="{% static 'core/img/teclas2.jpeg'%}" alt="Tienda1">
+					</a>
+				</div>
+		</div>
+		<div class=" row row-fila-galeria-tienda">
+			<div class="titulo-galeria-tienda col-md-12 col-lg-2">
+					<h4>Sección percusión y accesorios</h4>
+			</div>
+			<div class="contenedor-galeria-tienda col-md-12 col-lg-10">
+					<a href="{% static 'core/img/otros1.jpeg'%}" class="fresco" data-fresco-group="galeria1">
+						<img src="{% static 'core/img/otros1.jpeg'%}" alt="Tienda1">
+					</a>
+					<a href="{% static 'core/img/otros2.jpeg'%}" class="fresco" data-fresco-group="galeria1">
+						<img src="{% static 'core/img/otros2.jpeg'%}" alt="Tienda1">
+					</a>
+				</div>
+		</div>
+	</section>
+
+    {% endblock%}
