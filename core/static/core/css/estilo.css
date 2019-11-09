@@ -87,7 +87,7 @@ del texto*/
 }
 
 .bx-wrapper img {
-height: 500px;
+	
 object-fit: cover;
 max-width: auto;
 display: inline;
