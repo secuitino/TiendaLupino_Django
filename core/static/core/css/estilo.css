@@ -87,10 +87,10 @@ del texto*/
 }
 
 .bx-wrapper img {
-	
-object-fit: cover;
-max-width: auto;
-display: inline;
+	height:500px;
+	object-fit: cover;
+	max-width: auto;
+	display: inline;
 }
 
 .bx-wrapper .bx-pager{
