@@ -23,25 +23,14 @@
 
             <div class="slider">
                 <!--por cada imagen un div-->
+				{% for s in sliders%}
                 <div>
-                    <img src="{% static 'core/img/instruments.jpg'%}" class="imagen-slider" title="Oferta valida desde 01 de septiembre hasta 30 de octubre, solo productos seleccionados.">
+					{% if s.image%}
+                    <img src="{{s.image.url}}" class="imagen-slider" title="Oferta valida desde 01 de septiembre hasta 30 de octubre, solo productos seleccionados.">
+					{% endif%}
                 </div>
                 <!--por cada imagen un div-->
-
-
-                <!--por cada imagen un div-->
-                <div>
-                    <img src="{% static 'core/img/cuerda2.jpeg'%}" class="imagen-slider" title="Guitarras acusticas con un 40% de descuento, oferta valida desde 18 de Sept hasta 1 de Octubre">
-                </div>
-                <!--por cada imagen un div-->
-
-                 <div>
-                    <img src="{% static 'core/img/cuerda3.jpeg'%}" class="imagen-slider" title="Oferta valida desde 18 de septiembre hasta 30 de octubre, solo productos seleccionados.">
-                </div>
-
-                <div>
-                    <img src="{% static 'core/img/teclas1.jpeg'%}" class="imagen-slider" title="Pianos personales con 60% de descuento, solo hasta 30 de Septiembre.">
-                </div>
+				{% endfor%}
 
             </div>
 	</div>

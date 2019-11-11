@@ -4,10 +4,11 @@ from .models import Slider
 # Create your views here.
 
 def home(request):
-    # data = {
-     #   'slider': Slider.
-    #} aca da error al tratar de cargar la base de dato
-    return render(request, 'core/index.html')#, data)
+    
+    data = {
+        'sliders': Slider.objects.all()
+    }
+    return render(request, 'core/index.html', data)
 
 def base(request):
     return render(request, 'core/base.html')
