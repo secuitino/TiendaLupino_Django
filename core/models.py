@@ -19,3 +19,9 @@ class Instrumento(models.Model):
     def __str__(self):
         return self.nombre
 
+
+class Slider(models.Model):
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.image
