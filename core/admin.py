@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Instrumento, TipoInstrumento, Slider,GaleriaCuerda,GaleriaPercusion,GaleriaTeclado
-
+from .models import Instrumento, TipoInstrumento, Slider,GaleriaCuerda,GaleriaPercusion,GaleriaTeclado,Nosotro
 # Register your models here.
 
 
@@ -18,5 +17,6 @@ admin.site.register(Slider)
 admin.site.register(GaleriaCuerda)
 admin.site.register(GaleriaPercusion)
 admin.site.register(GaleriaTeclado)
+admin.site.register(Nosotro)
 
 

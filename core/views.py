@@ -1,11 +1,11 @@
 from django.shortcuts import render
-from .models import Slider,GaleriaCuerda,GaleriaPercusion,GaleriaTeclado
+from .models import Slider,GaleriaCuerda,GaleriaPercusion,GaleriaTeclado,Nosotro
 
 # Create your views here.
 
 def home(request):    
     data = {
-        'sliders': Slider.objects.all()
+        'sliders': Slider.objects.all() # se traen los slider desde slqite
     }
     return render(request, 'core/index.html', data)
 
@@ -20,7 +20,9 @@ def mision_vision(request):
 
 def galeria(request):
     data = {
-        'galeriaCuerda': GaleriaCuerda.objects.all()  
+        'galeriaCuerda': GaleriaCuerda.objects.all(), # se traen las imagenes desde slqite
+        'galeriaPercucion': GaleriaPercusion.objects.all(), 
+        'galeriaTeclado': GaleriaTeclado.objects.all()   
     }
     return render(request, 'core/galeria.html', data)
 

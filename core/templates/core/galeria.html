@@ -45,27 +45,32 @@
 			<div class="titulo-galeria-tienda col-md-12 col-lg-2">
 					<h4>Sección cuerdas</h4>
 			</div>
-			    {% for g in galeriaCuerda%}
+			    
 			<div class="contenedor-galeria-tienda col-md-12 col-lg-10">
-					{% if g.imagen%}
-					<a href="{{g.imagen.url}}" class="fresco" data-fresco-group="galeria1">
+					{% for c in galeriaCuerda%}
+					{% if c.imagen %}
+					<a href="{{c.imagen.url}}" class="fresco" data-fresco-group="galeria1">
+							<img src={{c.imagen.url}} alt="">
 					</a>
 					{% endif%}
+					{% endfor%}
 				
 				</div>
-				{% endfor%}
+				
 		</div>
 		<div class=" row row-fila-galeria-tienda">
 			<div class="titulo-galeria-tienda col-md-12 col-lg-2">
 					<h4>Sección teclados y pianos</h4>
 			</div>
 			<div class="contenedor-galeria-tienda col-md-12 col-lg-10">
-					<a href="{% static 'core/img/teclas1.jpeg'%}" class="fresco" data-fresco-group="galeria1">
-						<img src="{% static 'core/img/teclas1.jpeg'%}" alt="Tienda1">
+
+					{% for t in galeriaTeclado%} <!-- Se genera el for para cargar las imagen desde el admin-->
+					{% if t.imagen %}
+					<a href="{{p.imagen.url}}" class="fresco" data-fresco-group="galeria1">
+							<img src={{t.imagen.url}} alt="">
 					</a>
-					<a href="{% static 'core/img/teclas2.jpeg'%}" class="fresco" data-fresco-group="galeria1">
-						<img src="{% static 'core/img/teclas2.jpeg'%}" alt="Tienda1">
-					</a>
+					{% endif%}
+					{% endfor%}
 				</div>
 		</div>
 		<div class=" row row-fila-galeria-tienda">
@@ -73,12 +78,13 @@
 					<h4>Sección percusión y accesorios</h4>
 			</div>
 			<div class="contenedor-galeria-tienda col-md-12 col-lg-10">
-					<a href="{% static 'core/img/otros1.jpeg'%}" class="fresco" data-fresco-group="galeria1">
-						<img src="{% static 'core/img/otros1.jpeg'%}" alt="Tienda1">
+					{% for p in galeriaPercucion%}
+					{% if p.imagen %}
+					<a href="{{p.imagen.url}}" class="fresco" data-fresco-group="galeria1">
+							<img src={{p.imagen.url}} alt="">
 					</a>
-					<a href="{% static 'core/img/otros2.jpeg'%}" class="fresco" data-fresco-group="galeria1">
-						<img src="{% static 'core/img/otros2.jpeg'%}" alt="Tienda1">
-					</a>
+					{% endif%}
+					{% endfor%}
 				</div>
 		</div>
 	</section>
