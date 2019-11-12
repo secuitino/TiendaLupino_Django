@@ -50,8 +50,11 @@ class GaleriaPercusion(models.Model):
         return self.nombre
 
 class Nosotro(models.Model):
-    nombre = models.CharField(max_length=80)
-    descripcion = models.TextField(max_length=300)
+    titulo_pagina = models.CharField(max_length=80)
+    titulo_mision = models.TextField(max_length=300)
+    descripcion_mision = models.TextField(max_length=1000)
+    titulo_vision = models.TextField(max_length=300)
+    descripcion_vision = models.TextField(max_length=1000)
 
     def __str__(self):
-        return self.nombre  
+        return self.titulo_pagina  

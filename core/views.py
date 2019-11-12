@@ -16,7 +16,10 @@ def productos(request):
     return render(request,'core/productos.html')
 
 def mision_vision(request):
-    return render(request,'core/mision_vision.html')
+    data = {
+        'MisionVision': Nosotro.objects.all()
+    }
+    return render(request,'core/mision_vision.html', data)
 
 def galeria(request):
     data = {
@@ -27,7 +30,7 @@ def galeria(request):
     return render(request,'core/galeria.html', data)
 
 def agregar_instrumento(request):
-    return render(request, 'core/agregar_instrumento.html', data)
+    return render(request, 'core/agregar_instrumento.html')
 
 def contacto(request):
     return render(request, 'core/contacto.html')
