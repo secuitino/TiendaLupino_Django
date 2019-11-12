@@ -22,12 +22,12 @@ def galeria(request):
     data = {
         'galeriaCuerda': GaleriaCuerda.objects.all(), # se traen las imagenes desde slqite
         'galeriaPercucion': GaleriaPercusion.objects.all(), 
-        'galeriaTeclado': GaleriaTeclado.objects.all()   
+        'galeriaTeclado': GaleriaTeclado.objects.all()
     }
-    return render(request, 'core/galeria.html', data)
+    return render(request,'core/galeria.html', data)
 
 def agregar_instrumento(request):
-    return render(request, 'core/agregar_instrumento.html')
+    return render(request, 'core/agregar_instrumento.html', data)
 
 def contacto(request):
     return render(request, 'core/contacto.html')
