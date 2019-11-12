@@ -20,12 +20,14 @@ def mision_vision(request):
 
 def galeria(request):
     data = {
-        'galeriaCuerda': GaleriaCuerda.objects.all()  
+        'galeriaCuerda': GaleriaCuerda.objects.all(), 
+        'galeriaPercusion': GaleriaPercusion.objects.all(),
+        'galeriaTeclado': GaleriaTeclado.objects.all()  
     }
     return render(request, 'core/galeria.html', data)
 
 def agregar_instrumento(request):
-    return render(request, 'core/agregar_instrumento.html')
+    return render(request, 'core/agregar_instrumento.html', data)
 
 def contacto(request):
     return render(request, 'core/contacto.html')

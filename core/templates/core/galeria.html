@@ -45,15 +45,16 @@
 			<div class="titulo-galeria-tienda col-md-12 col-lg-2">
 					<h4>Sección cuerdas</h4>
 			</div>
-			    {% for g in galeriaCuerda%}
+			    
 			<div class="contenedor-galeria-tienda col-md-12 col-lg-10">
-					{% if g.imagen%}
-					<a href="{{g.imagen.url}}" class="fresco" data-fresco-group="galeria1">
+					{% for g in galeriaCuerda%}
+					{%if g.imagen %}
+					<a href="{{ g.imagen.url}}" class="fresco" data-fresco-group="galeria1">
+						<img src="{{ g.imagen.url}}" alt="">
 					</a>
-					{% endif%}
-				
-				</div>
-				{% endfor%}
+					{%endif %}
+					{% endfor%}
+			</div>
 		</div>
 		<div class=" row row-fila-galeria-tienda">
 			<div class="titulo-galeria-tienda col-md-12 col-lg-2">
