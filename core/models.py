@@ -27,4 +27,24 @@ class Slider(models.Model):
     def __str__(self):
         return self.nombre
 
-  
+
+class GaleriaCuerda(models.Model):
+    imagen= models.ImageField(null=True, blank=True)
+    nombre = models.CharField(max_length=80)
+
+    def __str__(self):
+        return self.nombre
+
+class GaleriaTeclado(models.Model):
+    imagen= models.ImageField(null=True, blank=True)
+    nombre = models.CharField(max_length=80)
+
+    def __str__(self):
+        return self.nombre
+
+class GaleriaPercusion(models.Model):
+    imagen= models.ImageField(null=True, blank=True)
+    nombre = models.CharField(max_length=80)
+
+    def __str__(self):
+        return self.nombre                

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Instrumento, TipoInstrumento, Slider
+from .models import Instrumento, TipoInstrumento, Slider,GaleriaCuerda,GaleriaPercusion,GaleriaTeclado
 
 # Register your models here.
 
@@ -15,5 +15,8 @@ class InstrumentoAdmin(admin.ModelAdmin):
 admin.site.register (TipoInstrumento)
 admin.site.register (Instrumento, InstrumentoAdmin)
 admin.site.register(Slider)
+admin.site.register(GaleriaCuerda)
+admin.site.register(GaleriaPercusion)
+admin.site.register(GaleriaTeclado)
 
 

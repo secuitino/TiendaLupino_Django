@@ -45,20 +45,15 @@
 			<div class="titulo-galeria-tienda col-md-12 col-lg-2">
 					<h4>Sección cuerdas</h4>
 			</div>
+			    {% for g in galeriaCuerda%}
 			<div class="contenedor-galeria-tienda col-md-12 col-lg-10">
-					<a href="{% static 'core/img/cuerda1.jpeg'%}" class="fresco" data-fresco-group="galeria1">
-						<img src="{% static 'core/img/cuerda1.jpeg'%}" alt="Tienda1">
+					{% if g.imagen%}
+					<a href="{{g.imagen.url}}" class="fresco" data-fresco-group="galeria1">
 					</a>
-					<a href="{% static 'core/img/cuerda2.jpeg'%}" class="fresco" data-fresco-group="galeria1">
-						<img src="{% static 'core/img/cuerda2.jpeg'%}" alt="Tienda1">
-					</a>
-					<a href="{% static 'core/img/cuerda3.jpeg'%}" class="fresco" data-fresco-group="galeria1">
-						<img src="{% static 'core/img/cuerda3.jpeg'%}" alt="Tienda1">
-					</a>
-					<a href="{% static 'core/img/cuerda4.jpeg'%}" class="fresco" data-fresco-group="galeria1">
-						<img src="{% static 'core/img/cuerda4.jpeg'%}" alt="Tienda1">
-					</a>
+					{% endif%}
+				
 				</div>
+				{% endfor%}
 		</div>
 		<div class=" row row-fila-galeria-tienda">
 			<div class="titulo-galeria-tienda col-md-12 col-lg-2">
